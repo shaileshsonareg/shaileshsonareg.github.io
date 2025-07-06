@@ -2,205 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shailesh Sonare | Full Stack Developer & Engineering Manager</title>
-  <meta name="description" content="Shailesh Sonare is a full stack developer and engineering leader with expertise in GoLang, Java, Node.js, React, DevOps and SaaS platforms.">
-  <meta name="keywords" content="Shailesh Sonare, Full Stack Developer, Engineering Manager, GoLang, Java, React, Node.js, DevOps, Portfolio, Resume">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shailesh Sonare | Project Manager & Developer</title>
+  <meta name="description" content="Portfolio of Shailesh Sonare – Project Manager & Full Stack Developer with expertise in GoLang, Java, React, Node.js, and more.">
+  <meta name="keywords" content="Shailesh Sonare, Full Stack Developer, Project Manager, Portfolio, GoLang, Java, React">
   <meta name="author" content="Shailesh Sonare" />
-  <meta property="og:title" content="Shailesh Sonare | Full Stack Developer & Mentor" />
-  <meta property="og:description" content="Explore the work, projects and journey of Shailesh Sonare – Full Stack Developer and Engineering Manager." />
-  <meta property="og:image" content="your-thumbnail.jpg" />
-  <meta property="og:url" content="https://shaileshsonareg.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0d1117;
+      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
       color: #fff;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
-    .hero {
-      height: 100vh;
-      background: linear-gradient(to bottom, #0d1117 30%, #161b22);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #58a6ff;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #c9d1d9;
-      margin-top: 0.5rem;
-    }
-
-    .section {
-      padding: 5rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      color: #58a6ff;
-      border-bottom: 2px solid #30363d;
-      margin-bottom: 1.5rem;
-    }
-
-    .skills, .projects, .experience {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-      backdrop-filter: blur(8px);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .contact, .footer {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .social-links a {
-      color: #58a6ff;
-      margin: 0 0.7rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .parallax {
-      background-image: url('your-background.jpg');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      height: 400px;
+    /* Background Stars */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      position: relative;
+      height: 100%;
+      background-image: radial-gradient(2px 2px at 20% 30%, #ffffff33, transparent),
+                        radial-gradient(1.5px 1.5px at 70% 60%, #ffffff22, transparent),
+                        radial-gradient(2px 2px at 80% 10%, #ffffff22, transparent);
+      animation: twinkle 5s infinite alternate;
+      z-index: -1;
     }
 
-    .footer {
+    @keyframes twinkle {
+      0% { opacity: 0.4; transform: translateY(0); }
+      100% { opacity: 0.8; transform: translateY(-2px); }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #58a6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #7df9ff;
+      margin-bottom: 20px;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+
+    .glass-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(91, 171, 255, 0.4);
+    }
+
+    .skills, .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #1e293b;
+      color: #7df9ff;
+      padding: 6px 12px;
+      border-radius: 20px;
       font-size: 0.9rem;
-      color: #8b949e;
-      border-top: 1px solid #30363d;
+      margin: 5px;
+    }
+
+    .social {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .social a {
+      color: #7df9ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      border-top: 1px solid #334155;
+      padding: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .section {
-        padding: 3rem 1rem;
-      }
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>Shailesh Sonare</h1>
+    <p>Project Manager | Full Stack Developer | Mentor</p>
+  </header>
 
-  <section class="hero">
-    <h1>👋 Hi, I'm Shailesh Sonare</h1>
-    <p>Engineering Manager | Full Stack Developer | Mentor</p>
-  </section>
-
-  <div class="parallax"></div>
-
-  <section class="section" id="about">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I’m a passionate developer with 12+ years of experience building enterprise-grade products and mentoring developers. My core stack includes GoLang, Java, Node.js, React, Spring Boot, MySQL, Docker, and AWS. I lead engineering teams and focus on building scalable systems with best practices in DevOps and architecture.</p>
-  </section>
-
-  <section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">GoLang</div>
-      <div class="card">Java</div>
-      <div class="card">Spring Boot</div>
-      <div class="card">React</div>
-      <div class="card">Node.js</div>
-      <div class="card">Docker</div>
-      <div class="card">AWS</div>
-      <div class="card">Redis</div>
-      <div class="card">ClickHouse</div>
+    <div class="glass-box">
+      <p>I’m a passionate developer and project manager with 12+ years of experience building enterprise-grade products. My tech stack includes GoLang, Java, Node.js, React, Spring Boot, MySQL, Docker, Redis, and AWS. I enjoy mentoring developers and crafting scalable systems with clean architecture and DevOps best practices.</p>
     </div>
   </section>
 
-  <section class="section" id="projects">
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="glass-box skills">
+      <span class="tag">GoLang</span>
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">React</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Docker</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Redis</span>
+    </div>
+  </section>
+
+  <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-      <div class="card">
-        <h3>PowerInbox Admin Panel</h3>
-        <p>Admin dashboard for managing email flow, domain/user settings and reporting using GoLang, React, MySQL.</p>
-      </div>
-      <div class="card">
+      <div class="glass-box">
         <h3>Cquiz Platform</h3>
-        <p>Quiz system for institutes and educators with RBAC, analytics and test management features.</p>
+        <p>Online quiz platform for institutes and educators with RBAC, analytics, and test management capabilities.</p>
       </div>
-      <div class="card">
-        <h3>EMA v4 - Mail Archive Tool</h3>
-        <p>Email archival system deployed at ISRO SAC, developed with Java and Perl for enterprise reliability.</p>
+      <div class="glass-box">
+        <h3>Open Contribution</h3>
+        <p>Multiple GitHub open-source contributions on DevOps scripts, front-end templates, and backend modules.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="experience">
+  <section id="experience">
     <h2>Experience</h2>
-    <div class="experience">
-      <div class="card">
-        <h3>Engineering Manager</h3>
-        <p>Leading development teams, overseeing project delivery, architecture, and cross-functional mentoring.</p>
-      </div>
-      <div class="card">
-        <h3>Senior Full Stack Developer</h3>
-        <p>Built full-stack SaaS tools and automation pipelines. Owned complete product lifecycle.</p>
-      </div>
-      <div class="card">
-        <h3>Freelance Developer</h3>
-        <p>Worked with multiple startups on backend architecture, React dashboards, and DevOps setup.</p>
-      </div>
+    <div class="glass-box">
+      <h3>Project Manager</h3>
+      <p>Leading development teams, overseeing delivery, architecture, and cross-functional mentoring.</p>
     </div>
   </section>
 
-  <section class="section contact" id="contact">
-    <h2>Let’s Connect</h2>
-    <p>I'm open to opportunities, mentorship, and collaborations. Let's build something impactful!</p>
-    <div class="social-links">
-      <a href="mailto:you@example.com">Email</a>
-      <a href="https://linkedin.com/in/shaileshsonare" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/shaileshsonare" target="_blank">Instagram</a>
-      <a href="https://github.com/shaileshsonareg" target="_blank">GitHub</a>
-      <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank">CodeInsightAcademy</a>
-      <a href="https://www.youtube.com/@ciadevlive" target="_blank">CI Dev Live</a>
-      <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank">Social Channel</a>
-    </div>
+  <section class="social">
+    <h2>Connect</h2>
+    <a href="mailto:your@email.com">Email</a>
+    <a href="https://linkedin.com/in/shaileshsonare" target="_blank">LinkedIn</a>
+    <a href="https://github.com/shaileshsonareg" target="_blank">GitHub</a>
+    <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank">YouTube</a>
   </section>
 
-  <footer class="footer">
-    &copy; 2025 Shailesh Sonare. Built with 💙 & Focus.  
+  <footer>
+    &copy; 2025 Shailesh Sonare | Built with 💙 and vision
   </footer>
-
 </body>
 </html>

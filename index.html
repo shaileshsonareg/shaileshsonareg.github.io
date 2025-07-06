@@ -3,166 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shailesh Sonare | Full Stack Developer and Mentor</title>
-  <meta name="description" content="Official portfolio of Shailesh Sonare – Engineering Manager and Full Stack Developer with 12+ years experience in GoLang, Java, React, Node.js, DevOps & SaaS platforms.">
-  <meta name="keywords" content="Shailesh Sonare, Full Stack Developer, Engineering Manager, GoLang, Java, React, DevOps, Portfolio, Resume">
+  <title>Shailesh Sonare | Full Stack Developer & Engineering Manager</title>
+  <meta name="description" content="Shailesh Sonare is a full stack developer and engineering leader with expertise in GoLang, Java, Node.js, React, DevOps and SaaS platforms.">
+  <meta name="keywords" content="Shailesh Sonare, Full Stack Developer, Engineering Manager, GoLang, Java, React, Node.js, DevOps, Portfolio, Resume">
   <meta name="author" content="Shailesh Sonare" />
-  
-  <!-- Open Graph for SEO/Social -->
-  <meta property="og:title" content="Shailesh Sonare | Engineering Manager & Full Stack Developer">
-  <meta property="og:description" content="Explore the projects, skills, and experience of Shailesh Sonare – Full Stack Developer and Engineering Leader.">
-  <meta property="og:image" content="https://shaileshsonareg.github.io/profile-preview.png" />
+  <meta property="og:title" content="Shailesh Sonare | Full Stack Developer & Mentor" />
+  <meta property="og:description" content="Explore the work, projects and journey of Shailesh Sonare – Full Stack Developer and Engineering Manager." />
+  <meta property="og:image" content="your-thumbnail.jpg" />
   <meta property="og:url" content="https://shaileshsonareg.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    :root {
-      --primary: #007BFF;
-      --accent: #ffffff;
-      --bg: #f7f9fc;
-      --text-dark: #1a1a1a;
-      --text-light: #555;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text-dark);
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0d1117;
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
-    header {
-      background: var(--primary);
-      color: var(--accent);
-      padding: 3rem 2rem;
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom, #0d1117 30%, #161b22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      position: relative;
     }
 
-    header h1 {
-      font-size: 2.8rem;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #58a6ff;
     }
 
-    header p {
+    .hero p {
       font-size: 1.2rem;
+      color: #c9d1d9;
       margin-top: 0.5rem;
     }
 
-    section {
-      max-width: 900px;
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
       margin: auto;
-      padding: 3rem 2rem;
     }
 
-    h2 {
-      color: var(--primary);
+    .section h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
+      color: #58a6ff;
+      border-bottom: 2px solid #30363d;
+      margin-bottom: 1.5rem;
     }
 
-    .skills, .projects, .experience, .contact {
-      margin-top: 2rem;
+    .skills, .projects, .experience {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      margin-top: 1rem;
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease;
     }
 
-    ul li {
-      margin-bottom: 0.75rem;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .socials a {
-      color: var(--primary);
-      text-decoration: none;
-      margin-right: 1rem;
-      font-weight: bold;
-    }
-
-    footer {
+    .contact, .footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: var(--text-light);
-      border-top: 1px solid #ddd;
     }
 
-    @media screen and (max-width: 600px) {
-      header h1 {
+    .social-links a {
+      color: #58a6ff;
+      margin: 0 0.7rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .parallax {
+      background-image: url('your-background.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      width: 100%;
+      position: relative;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
         font-size: 2rem;
       }
-      section {
-        padding: 2rem 1rem;
+      .section {
+        padding: 3rem 1rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Shailesh Sonare</h1>
-    <p>Full Stack Developer | YouTuber | Mentor</p>
-  </header>
+  <section class="hero">
+    <h1>👋 Hi, I'm Shailesh Sonare</h1>
+    <p>Engineering Manager | Full Stack Developer | Mentor</p>
+  </section>
 
-  <section class="about">
+  <div class="parallax"></div>
+
+  <section class="section" id="about">
     <h2>About Me</h2>
-    <p>
-      I'm a passionate Engineering Manager and Full Stack Developer with over 12 years of experience building scalable SaaS platforms, optimizing backend systems, and leading high-performing tech teams.
-      Skilled in GoLang, Java, Node.js, React, Spring Boot, DevOps, and cloud infrastructure. I love mentoring developers and solving real-world problems through technology.
-    </p>
+    <p>I’m a passionate developer with 12+ years of experience building enterprise-grade products and mentoring developers. My core stack includes GoLang, Java, Node.js, React, Spring Boot, MySQL, Docker, and AWS. I lead engineering teams and focus on building scalable systems with best practices in DevOps and architecture.</p>
   </section>
 
-  <section class="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> GoLang, Java, JavaScript, Node.js, Perl, Shell</li>
-      <li><strong>Frameworks:</strong> Spring Boot, JPA, React.js, Express</li>
-      <li><strong>Databases:</strong> MySQL, Redis, ClickHouse, MongoDB</li>
-      <li><strong>DevOps & Tools:</strong> Docker, Kubernetes, Jenkins, GitHub Actions, Nginx</li>
-      <li><strong>Cloud:</strong> AWS (EC2, S3, SES, Route53)</li>
-      <li><strong>Practices:</strong> Microservices, REST APIs, CI/CD, Agile, Scrum</li>
-    </ul>
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">GoLang</div>
+      <div class="card">Java</div>
+      <div class="card">Spring Boot</div>
+      <div class="card">React</div>
+      <div class="card">Node.js</div>
+      <div class="card">Docker</div>
+      <div class="card">AWS</div>
+      <div class="card">Redis</div>
+      <div class="card">ClickHouse</div>
+    </div>
   </section>
 
-  <section class="projects">
-    <h2>Key Projects</h2>
-    <ul>
-      <li><strong>PowerInbox Admin Panel:</strong> Complete SaaS platform for managing mail flow, reporting, and user/domain settings (GoLang + React + MySQL).</li>
-      <li><strong>Cquiz Platform:</strong> Online quiz/test system with RBAC for students, teachers, and institutes.</li>
-      <li><strong>EMA v4 – Mail Archive Tool:</strong> Deployed at ISRO SAC, built using Java and Perl for secure email archiving.</li>
-    </ul>
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>PowerInbox Admin Panel</h3>
+        <p>Admin dashboard for managing email flow, domain/user settings and reporting using GoLang, React, MySQL.</p>
+      </div>
+      <div class="card">
+        <h3>Cquiz Platform</h3>
+        <p>Quiz system for institutes and educators with RBAC, analytics and test management features.</p>
+      </div>
+      <div class="card">
+        <h3>EMA v4 - Mail Archive Tool</h3>
+        <p>Email archival system deployed at ISRO SAC, developed with Java and Perl for enterprise reliability.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="experience">
-    <h2>Experience Highlights</h2>
-    <ul>
-      <li>👨‍💼 Engineering Manager – Leading full-stack teams and overseeing backend system architecture</li>
-      <li>🧑‍💻 Full Stack Developer – Developing with GoLang, Java, React, and Node.js</li>
-      <li>🔧 DevOps Advocate – Setting up CI/CD pipelines and cloud infrastructure</li>
-      <li>📢 Mentor – Providing tech guidance and knowledge sharing to upcoming developers</li>
-    </ul>
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+    <div class="experience">
+      <div class="card">
+        <h3>Engineering Manager</h3>
+        <p>Leading development teams, overseeing project delivery, architecture, and cross-functional mentoring.</p>
+      </div>
+      <div class="card">
+        <h3>Senior Full Stack Developer</h3>
+        <p>Built full-stack SaaS tools and automation pipelines. Owned complete product lifecycle.</p>
+      </div>
+      <div class="card">
+        <h3>Freelance Developer</h3>
+        <p>Worked with multiple startups on backend architecture, React dashboards, and DevOps setup.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>If you'd like to connect, collaborate, or have an opportunity, feel free to reach out:</p>
-    <p class="socials">
-      <a href="mailto:shaileshsonare@gmail.com">Email</a>
+  <section class="section contact" id="contact">
+    <h2>Let’s Connect</h2>
+    <p>I'm open to opportunities, mentorship, and collaborations. Let's build something impactful!</p>
+    <div class="social-links">
+      <a href="mailto:you@example.com">Email</a>
       <a href="https://linkedin.com/in/shaileshsonare" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/shaileshsonare" target="_blank">Instagram</a>
       <a href="https://github.com/shaileshsonareg" target="_blank">GitHub</a>
-    </p>
+      <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank">CodeInsightAcademy</a>
+      <a href="https://www.youtube.com/@ciadevlive" target="_blank">CI Dev Live</a>
+      <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank">Social Channel</a>
+    </div>
   </section>
 
-  <footer>
-    &copy; 2025 Shailesh Sonare. All rights reserved. | Built with 💙 and code
+  <footer class="footer">
+    &copy; 2025 Shailesh Sonare. Built with 💙 & Focus.  
   </footer>
 
 </body>

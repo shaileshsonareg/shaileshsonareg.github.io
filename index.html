@@ -2,203 +2,244 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shailesh Sonare | Project Manager & Developer</title>
-  <meta name="description" content="Portfolio of Shailesh Sonare – Project Manager & Full Stack Developer with expertise in GoLang, Java, React, Node.js, and more.">
-  <meta name="keywords" content="Shailesh Sonare, Full Stack Developer, Project Manager, Portfolio, GoLang, Java, React">
-  <meta name="author" content="Shailesh Sonare" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
-      color: #fff;
-      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f172a, #1e293b);
+      color: #f8fafc;
     }
-
-    /* Background Stars */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(2px 2px at 20% 30%, #ffffff33, transparent),
-                        radial-gradient(1.5px 1.5px at 70% 60%, #ffffff22, transparent),
-                        radial-gradient(2px 2px at 80% 10%, #ffffff22, transparent);
-      animation: twinkle 5s infinite alternate;
-      z-index: -1;
-    }
-
-    @keyframes twinkle {
-      0% { opacity: 0.4; transform: translateY(0); }
-      100% { opacity: 0.8; transform: translateY(-2px); }
-    }
-
-    header {
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding: 100px 20px 60px;
+      min-height: 100vh;
+      background: linear-gradient(to right, #2563eb, #1e40af);
+      color: white;
+      padding: 50px 20px;
+      animation: fadeIn 1.2s ease-in-out;
     }
-
-    header h1 {
+    .hero h1 {
       font-size: 3.2rem;
-      font-weight: 900;
-      color: #58a6ff;
-      margin-bottom: 0.5rem;
+      font-weight: 800;
     }
-
-    header p {
+    .hero p {
       font-size: 1.2rem;
-      color: #cbd5e1;
+      color: #e0f2fe;
     }
-
     section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      animation: fadeIn 1s ease-in;
+      max-width: 960px;
+      margin: auto;
+      padding: 50px 20px;
     }
-
     h2 {
       font-size: 2rem;
-      color: #7df9ff;
-      margin-bottom: 20px;
+      color: #facc15;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 0.5rem;
     }
-
-    .glass-box {
-      background: rgba(255, 255, 255, 0.05);
+    .card {
+      background: rgba(255,255,255,0.05);
       padding: 20px;
+      border-radius: 12px;
       margin-bottom: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-      backdrop-filter: blur(8px);
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
     }
-
-    .glass-box:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 30px rgba(91, 171, 255, 0.4);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
     }
-
-    .skills, .projects {
-      display: grid;
+    .qr-code {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-top: 40px;
     }
-
-    .tag {
-      display: inline-block;
-      background-color: #1e293b;
-      color: #7df9ff;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin: 5px;
-    }
-
-    .social {
+    .qr-code div {
       text-align: center;
-      padding: 40px 0;
     }
-
-    .social a {
-      color: #7df9ff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
+    .qr-code canvas {
+      background: white;
+      border-radius: 8px;
+      padding: 6px;
     }
-
+    .qr-code p {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #64748b;
-      border-top: 1px solid #334155;
-      padding: 20px;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      background-color: #1e293b;
     }
-
+    .btn-resume {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #facc15;
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .btn-resume:hover {
+      background: #fde047;
+    }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.6rem; }
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-
 <body>
-  <header>
+  <section class="hero">
     <h1>Shailesh Sonare</h1>
     <p>Project Manager | Full Stack Developer | Mentor</p>
-  </header>
+    <a class="btn-resume" href="/Shailesh_Sonare_Resume_Nc.pdf" target="_blank">Download Resume</a>
+  </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <div class="glass-box">
-      <p>I’m a passionate developer and project manager with 12+ years of experience building enterprise-grade products. My tech stack includes GoLang, Java, Node.js, React, Spring Boot, MySQL, Docker, Redis, and AWS. I enjoy mentoring developers and crafting scalable systems with clean architecture and DevOps best practices.</p>
+    <div class="card">
+      <p>I am a certified Project Manager and Full Stack Developer with 12+ years of experience in backend systems, frontend development, and DevOps. I lead engineering teams and have a strong track record in delivering SaaS platforms, automating infrastructure, and scaling solutions. My strengths include system architecture, clean code, agile planning, and mentoring engineers.</p>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <div class="glass-box skills">
-      <span class="tag">GoLang</span>
-      <span class="tag">Java</span>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">React</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Docker</span>
-      <span class="tag">AWS</span>
-      <span class="tag">Redis</span>
+    <h2>Skills & Technologies</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Languages:</strong> GoLang, Java, JavaScript, Shell, Perl</li>
+        <li><strong>Frameworks:</strong> React, Node.js, Spring Boot, Express</li>
+        <li><strong>Databases:</strong> MySQL, ClickHouse, Redis</li>
+        <li><strong>Cloud & DevOps:</strong> AWS (EC2, S3, SES), Docker, Jenkins, GitHub Actions, RHEL</li>
+        <li><strong>Tools:</strong> Git, Jira, Postman, VS Code, Linux</li>
+      </ul>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="glass-box">
-        <h3>Cquiz Platform</h3>
-        <p>Online quiz platform for institutes and educators with RBAC, analytics, and test management capabilities.</p>
-      </div>
-      <div class="glass-box">
-        <h3>Open Contribution</h3>
-        <p>Multiple GitHub open-source contributions on DevOps scripts, front-end templates, and backend modules.</p>
-      </div>
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="card">
+      <ul>
+        <li><strong>B.E. in Information Technology</strong> – Government Engineering College, 2011</li>
+        <li><strong>Certified Scrum Master</strong> – Scrum Alliance</li>
+        <li><strong>AWS Practitioner Certification</strong> – Amazon Web Services</li>
+      </ul>
     </div>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
-    <div class="glass-box">
-      <h3>Project Manager</h3>
-      <p>Leading development teams, overseeing delivery, architecture, and cross-functional mentoring.</p>
+    <div class="card">
+      <h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netcore_Cloud_Logo.png/200px-Netcore_Cloud_Logo.png" width="24" style="vertical-align:middle;"> Project Manager – Netcore Cloud</h3>
+      <p><em>Mar 2019 – Present</em></p>
+      <ul>
+        <li>Led Agile teams and delivered SaaS platforms with CI/CD automation</li>
+        <li>Improved deployment cycles by 40%</li>
+        <li>Oversaw infrastructure migration and DevOps transformations</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Axis_Bank_logo.svg/200px-Axis_Bank_logo.svg.png" width="24" style="vertical-align:middle;"> Senior Software Engineer – Axis Bank</h3>
+      <p><em>2018 – 2019</em></p>
+    </div>
+    <div class="card">
+      <h3><img src="https://hiddenbrains.com/images/hb-logo.svg" width="24" style="vertical-align:middle;"> Software Engineer – Hidden Brains</h3>
+      <p><em>2013 – 2015</em></p>
     </div>
   </section>
 
-<section class="social">
-  <h2>Connect</h2>
-  <a href="mailto:your@email.com">Email</a>
-  <a href="https://linkedin.com/in/shaileshsonare" target="_blank">LinkedIn</a>
-  <a href="https://github.com/shaileshsonareg" target="_blank">GitHub</a>
-  <a href="https://www.facebook.com/shaileshsonare" target="_blank">Facebook</a>
-  <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank">Code Insight Academy</a>
-  <a href="https://www.youtube.com/@ciadevlive" target="_blank">CI Dev Live</a>
-  <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank">Shailesh Sonare</a>
-</section>
-
+  <section id="connect">
+    <h2>Connect with Me</h2>
+    <div class="qr-code">
+      <div>
+        <a href="https://linkedin.com/in/shaileshsonare" target="_blank">
+          <canvas id="qr-linkedin"></canvas>
+          <p>$1LinkedIn</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/shaileshsonareg" target="_blank">
+          <canvas id="qr-github"></canvas>
+          <p>$1GitHub</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank">
+          <canvas id="qr-youtube"></canvas>
+          <p>$1YouTube (Main)</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank">
+          <canvas id="qr-codeinsight"></canvas>
+          <p>$1CodeInsightAcademy</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/@ciadevlive" target="_blank">
+          <canvas id="qr-ciadevlive"></canvas>
+          <p>$1CI Dev Live</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/shaileshsonare" target="_blank">
+          <canvas id="qr-facebook"></canvas>
+          <p>$1Facebook</p>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/shaileshsonare" target="_blank">
+          <canvas id="qr-instagram"></canvas>
+          <p>$1Instagram</p>
+        </a>
+      </div>
+    </div>
+      <div>
+        <canvas id="qr-github"></canvas>
+        <p><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" width="20" style="vertical-align:middle; filter: invert(1);"> GitHub</p>
+      </div>
+      <div>
+        <canvas id="qr-youtube"></canvas>
+        <p><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" width="20" style="vertical-align:middle; filter: invert(1);"> YouTube</p>
+      </div>
+      <div>
+        <canvas id="qr-facebook"></canvas>
+        <p><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" width="20" style="vertical-align:middle; filter: invert(1);"> Facebook</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Shailesh Sonare | Built with 💙 and vision
+    &copy; 2025 Shailesh Sonare. Built with passion and clean code.
   </footer>
+
+  <script>
+    const qrLinks = {
+      'qr-linkedin': 'https://linkedin.com/in/shaileshsonare',
+      'qr-github': 'https://github.com/shaileshsonareg',
+      'qr-youtube': 'https://www.youtube.com/@SHAILESHSONARE',
+      'qr-facebook': 'https://www.facebook.com/shaileshsonare',
+      'qr-instagram': 'https://www.instagram.com/shaileshsonare',
+      'qr-codeinsight': 'https://www.youtube.com/@CodeInsightAcademy',
+      'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive'
+    };
+    Object.entries(qrLinks).forEach(([id, url]) => {
+      new QRious({ element: document.getElementById(id), value: url, size: 100 });
+    });
+  </script>
 </body>
 </html>
